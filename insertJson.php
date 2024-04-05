@@ -35,24 +35,24 @@ Avgr:<input type="text" id="avg"><br><br>
             }
         });
         $(".read").click(function(){
-        //    $.getJSON(
-        //       "json/data.json",
-        //       function(data){
-        //         $.each(data,function(key,value){
-        //             $("#demo").append(value.sn+" "+value.name+" "+value.avgr+"<br>");
-        //         });
-        //       }
-        //    )
-           $.ajax({
-             url:"json/data.json",
-             type:"GET",
-             dataType:"JSON",
-             success:function(data){
+           $.getJSON(
+              "json/data.json",
+              function(data){
                 $.each(data,function(key,value){
                     $("#demo").append(value.sn+" "+value.name+" "+value.avgr+"<br>");
-                })
-             }
-           });
+                });
+              }
+           )
+        //    $.ajax({
+        //      url:"json/data.json",
+        //      type:"GET",
+        //      dataType:"JSON",
+        //      success:function(data){
+        //         $.each(data,function(key,value){
+        //             $("#demo").append(value.sn+" "+value.name+" "+value.avgr+"<br>");
+        //         })
+        //      }
+        //    });
         });
         $(".encode").click(function(){
             $.ajax({
